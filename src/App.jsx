@@ -8,6 +8,8 @@ import CreatePost from './pages/CreatePost'
 import Timer from './daily-challenges/Day1-Timer'
 import Search from './daily-challenges/Day2-Search'
 import Day3Tabs from './daily-challenges/Day3-Tabs'
+import Login from './daily-challenges/Day4-Login'
+import ProtectedRoute from './components/shared/ProtectedRoute'
 
 function App() {
   return (
@@ -17,10 +19,15 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="posts" element={<Posts />} />
         <Route path="posts/:postId" element={<PostDetail />} />
-        <Route path="create" element={<CreatePost />} />
         <Route path="timer" element={<Timer />} />
         <Route path="search" element={<Search />} />
         <Route path="tabs" element={<Day3Tabs />} />
+        <Route path="login" element={<Login />} />
+        <Route path="create" element={
+          <ProtectedRoute>
+            <CreatePost />
+          </ProtectedRoute>
+        } />
       </Route>
     </Routes>
   )
