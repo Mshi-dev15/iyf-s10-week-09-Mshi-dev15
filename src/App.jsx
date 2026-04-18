@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Posts from './pages/Posts'
 import PostDetail from './pages/PostDetail'
+import CreatePost from './pages/CreatePost'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="posts" element={<Posts />} />
         <Route path="posts/:postId" element={<PostDetail />} />
+        <Route path="create" element={<CreatePost />} />
       </Route>
     </Routes>
   )
