@@ -6,6 +6,7 @@ import Posts from './pages/Posts'
 import PostDetail from './pages/PostDetail'
 import CreatePost from './pages/CreatePost'
 import Timer from './daily-challenges/Day1-Timer'
+import Search from './daily-challenges/Day2-Search'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="posts/:postId" element={<PostDetail />} />
         <Route path="create" element={<CreatePost />} />
         <Route path="timer" element={<Timer />} />
+        <Route path="search" element={<Search />} />
       </Route>
     </Routes>
   )

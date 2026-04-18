@@ -8,6 +8,7 @@ function Layout() {
         <nav style={{ display: 'flex', gap: '16px' }}>
           <NavLink to="/create" style={({ isActive }) => ({ color: isActive ? '#e8654a' : 'white', textDecoration: 'none' })}>+ Post</NavLink>
           <NavLink to="/timer" style={({ isActive }) => ({ color: isActive ? '#e8654a' : 'white', textDecoration: 'none' })}>Timer</NavLink>
+          <NavLink to="/search" style={({ isActive }) => ({ color: isActive ? '#e8654a' : 'white', textDecoration: 'none' })}>Search</NavLink>
           <NavLink to="/" end style={({ isActive }) => ({ color: isActive ? '#e8654a' : 'white', textDecoration: 'none' })}>Home</NavLink>
           <NavLink to="/posts" style={({ isActive }) => ({ color: isActive ? '#e8654a' : 'white', textDecoration: 'none' })}>Posts</NavLink>
           <NavLink to="/about" style={({ isActive }) => ({ color: isActive ? '#e8654a' : 'white', textDecoration: 'none' })}>About</NavLink>
