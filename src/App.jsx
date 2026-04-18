@@ -9,6 +9,7 @@ import Timer from './daily-challenges/Day1-Timer'
 import Search from './daily-challenges/Day2-Search'
 import Day3Tabs from './daily-challenges/Day3-Tabs'
 import Login from './daily-challenges/Day4-Login'
+import UserProfile from './daily-challenges/Day5-UserProfile'
 import ProtectedRoute from './components/shared/ProtectedRoute'
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="search" element={<Search />} />
         <Route path="tabs" element={<Day3Tabs />} />
         <Route path="login" element={<Login />} />
+        <Route path="profile/:userId" element={<UserProfile />} />
         <Route path="create" element={
           <ProtectedRoute>
             <CreatePost />
