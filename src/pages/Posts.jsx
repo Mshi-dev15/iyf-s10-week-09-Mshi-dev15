@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import useFetch from '../hooks/useFetch'
 import { LoadingSpinner, ErrorMessage } from '../components/shared/Feedback'
+import Card from '../components/shared/Card/Card'
 
 function Posts() {
   const navigate = useNavigate()
@@ -15,14 +16,10 @@ function Posts() {
     <div className="page">
       <h1 style={{ marginBottom: '24px' }}>Posts</h1>
       {posts.slice(0, 10).map(post => (
-        <div
-          key={post.id}
-          className="card"
-          onClick={() => navigate(`/posts/${post.id}`)}
-        >
+        <Card key={post.id} onClick={() => navigate(`/posts/${post.id}`)}>
           <h3>{post.title}</h3>
           <p style={{ color: '#7a6e64', marginTop: '8px' }}>{post.body}</p>
-        </div>
+        </Card>
       ))}
     </div>
   )

@@ -1,5 +1,6 @@
 import useLocalStorage from '../hooks/useLocalStorage'
 import useToggle from '../hooks/useToggle'
+import Button from '../components/shared/Button/Button'
 
 function Home() {
   const [name, setName] = useLocalStorage('username', '')
@@ -21,12 +22,24 @@ function Home() {
         <small style={{ color: '#7a6e64' }}>Refresh the page — your name stays!</small>
       </div>
 
-      <div>
-        <h3>useToggle test</h3>
-        <button onClick={toggle} style={{ marginTop: '8px' }}>
+      <div style={{ marginBottom: '24px' }}>
+        <h3 style={{ marginBottom: '12px' }}>useToggle test</h3>
+        <Button onClick={toggle}>
           {isVisible ? 'Hide' : 'Show'} message
-        </button>
+        </Button>
         {isVisible && <p style={{ marginTop: '12px' }}>Hello! I am toggled on.</p>}
+      </div>
+
+      <div>
+        <h3 style={{ marginBottom: '12px' }}>Button variants</h3>
+        <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+          <Button variant="primary">Primary</Button>
+          <Button variant="secondary">Secondary</Button>
+          <Button variant="danger">Danger</Button>
+          <Button variant="ghost">Ghost</Button>
+          <Button loading>Loading</Button>
+          <Button disabled>Disabled</Button>
+        </div>
       </div>
     </div>
   )
