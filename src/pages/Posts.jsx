@@ -12,16 +12,16 @@ function Posts() {
   if (error)   return <ErrorMessage message={error} onRetry={() => window.location.reload()} />
 
   return (
-    <div>
-      <h1>Posts</h1>
+    <div className="page">
+      <h1 style={{ marginBottom: '24px' }}>Posts</h1>
       {posts.slice(0, 10).map(post => (
         <div
           key={post.id}
+          className="card"
           onClick={() => navigate(`/posts/${post.id}`)}
-          style={{ border: '1px solid #ccc', padding: '16px', marginBottom: '12px', borderRadius: '8px', cursor: 'pointer' }}
         >
           <h3>{post.title}</h3>
-          <p>{post.body}</p>
+          <p style={{ color: '#7a6e64', marginTop: '8px' }}>{post.body}</p>
         </div>
       ))}
     </div>

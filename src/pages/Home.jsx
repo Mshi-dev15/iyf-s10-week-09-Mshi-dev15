@@ -1,40 +1,33 @@
-import { useState, useEffect } from 'react'
+import useLocalStorage from '../hooks/useLocalStorage'
+import useToggle from '../hooks/useToggle'
 
 function Home() {
-  const [count, setCount] = useState(0)
-
-  // Effect 1: runs after EVERY render
-  useEffect(() => {
-    console.log('Effect ran! Count is:', count)
-  })
-
-  // Effect 2: runs ONCE on mount
-  useEffect(() => {
-    console.log('Component mounted!')
-  }, [])
-
-  // Effect 3: runs when count changes
-  useEffect(() => {
-    document.title = `Count: ${count}`
-  }, [count])
-
-  // Effect 4: cleanup
-  useEffect(() => {
-    const interval = setInterval(() => {
-      console.log('Tick')
-    }, 1000)
-
-    return () => {
-      clearInterval(interval)
-      console.log('Cleaned up!')
-    }
-  }, [])
+  const [name, setName] = useLocalStorage('username', '')
+  const [isVisible, { toggle }] = useToggle(false)
 
   return (
-    <div>
+    <div className="page">
       <h1>Welcome to CommunityHub</h1>
-      <p>Count: {count}</p>
-      <button onClick={() => setCount(count + 1)}>Increment</button>
+
+      <div style={{ marginBottom: '24px', marginTop: '24px' }}>
+        <h3>useLocalStorage test</h3>
+        <input
+          value={name}
+          onChange={e => setName(e.target.value)}
+          placeholder="Type your name"
+          style={{ marginRight: '8px' }}
+        />
+        <p style={{ marginTop: '8px' }}>Hello, {name || 'stranger'}!</p>
+        <small style={{ color: '#7a6e64' }}>Refresh the page — your name stays!</small>
+      </div>
+
+      <div>
+        <h3>useToggle test</h3>
+        <button onClick={toggle} style={{ marginTop: '8px' }}>
+          {isVisible ? 'Hide' : 'Show'} message
+        </button>
+        {isVisible && <p style={{ marginTop: '12px' }}>Hello! I am toggled on.</p>}
+      </div>
     </div>
   )
 }

@@ -1,8 +1,10 @@
 function About() {
   return (
-    <div>
+    <div className="page">
       <h1>About CommunityHub</h1>
-      <p>This app is built with React and React Router as part of IYF Week 9.</p>
+      <p style={{ marginTop: '12px', color: '#7a6e64' }}>
+        This app is built with React and React Router as part of IYF Week 9.
+      </p>
     </div>
   )
 }
