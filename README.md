@@ -12,13 +12,16 @@
 - **GitHub:** [@Mshi-dev15](https://github.com/Mshi-dev15)
 - **Date:** April 18, 2026
 ---
+
 ## Project Description
 CommunityHub is a multi-page React application built as part of the IYF Weekend Academy Season 10 curriculum. It demonstrates advanced React patterns including useEffect, data fetching, React Router, custom hooks, and a reusable component library.
 ---
+
 ## Live Demo  
 
 [![✨ Explore Now](https://img.shields.io/badge/✨%20Explore%20CommunityHub-6C63FF?style=for-the-badge&logo=githubpages&logoColor=white)](https://Mshi-dev15.github.io/iyf-s10-week-09-Mshi-dev15/)
 ---
+
 ## Technologies Used
 - React 18
 - React Router DOM v6
@@ -27,6 +30,7 @@ CommunityHub is a multi-page React application built as part of the IYF Weekend 
 - CSS3
 - JSONPlaceholder API
 ---
+
 ## Features
 - Multi-page navigation with React Router
 - Real API data fetching from JSONPlaceholder
@@ -40,12 +44,14 @@ CommunityHub is a multi-page React application built as part of the IYF Weekend 
 - Loading and error states on all data pages
 - Daily Challenges: Timer, Search, Tabs, Protected Routes, User Profile
 ---
+
 ## How to Run
 1. Clone this repository
 2. Run `npm install`
 3. Run `npm run dev`
 4. Open `http://localhost:5173/iyf-s10-week-09-Mshi-dev15/` in your browser
 ---
+
 ## Lessons Learned
 - How useEffect works with different dependency arrays
 - How to clean up side effects to prevent memory leaks
@@ -54,6 +60,7 @@ CommunityHub is a multi-page React application built as part of the IYF Weekend 
 - How to protect pages using context and Navigate
 - How to debounce search input using useEffect and setTimeout
 ---
+
 ## Challenges Faced
 - React Router v7 conflicted with React 19 — solved by installing react-router-dom@6.22.0
 - GitHub Pages showed a blank page — solved by switching from BrowserRouter to HashRouter and setting the base path in vite.config.js
